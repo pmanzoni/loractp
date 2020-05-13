@@ -20,7 +20,7 @@ The code in this folder offers the same functionalities of `loractp.py`  but to 
 Code in subfolder `lopy4code` must be loaded in a LoPy and it start immediately when the device is powered (a 3 second red led blink followed by a green blink)
 Code in subfolder `p3code` is basically the rewriting of the code in the main repository but it is supposed to be executed in a "generic python3 capable device"... for example a Raspberry Pi. As before:
 
-* File `loractp.py` includes the class definition.
+* File `loractp.py` includes the class definition, and `seriallopy.py`includes the interfacing code with the LopY... used as a LoRa adaptor.
 
 * File `receiver.py` shows the example of a receiving node.
 
