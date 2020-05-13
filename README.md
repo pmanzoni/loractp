@@ -1,11 +1,16 @@
 # LoRaCTP: LoRa Content Transfer Protocol
 
+
 The code in this repository allows to transfer blocks of bytes ("content") over a LoRa (pure LoRa, no LoRaWAN) channel. The library was tested with content of the size of 100kB.
 
 It is based on a stop & wait protocol and adapted to a LoRa raw channel (inspired by https://github.com/arturenault/reliable-transport-protocol by Artur Upton Renault).
 
-It is written in MicroPython and tested on a [LoPy4](https://pycom.io/product/lopy4/) quadruple bearer MicroPython enabled development board.
 
+## Folder `loractp`
+
+THe codei in this folder is written in MicroPython and tested on a [LoPy4](https://pycom.io/product/lopy4/) quadruple bearer MicroPython enabled development board. File `boot.py` simply disables the WiFi to limit interferences.
+
+* Files `ping.py` and `pong.py` are examples of a request/response interaction
 
 * File `loractp.py` includes the class definition.
 
@@ -21,6 +26,10 @@ Code in subfolder `lopy4code` must be loaded in a LoPy and it starts immediately
 Code in subfolder `p3code` is basically the rewriting of the code in the main repository. 
 
 * File `loractp.py` includes the class definition, and `seriallopy.py`includes the interfacing code with the LoPy... used as a LoRa adaptor.
+
+* Files `ping.py` and `pong.py` are examples of a request/response interaction
+
+
 
 * File `receiver.py` shows the example of a receiving node.
 
