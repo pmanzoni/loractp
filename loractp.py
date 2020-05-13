@@ -310,11 +310,11 @@ class CTPendpoint:
         else:
             return self.my_addr, snd_addr, -1
 
-    def write(self, addr=ANY_ADDR, payload=b''):
+    def sendit(self, addr=ANY_ADDR, payload=b''):
         rcvr_addr, stats_psent, stats_retrans, FAILED = self._csend(payload, self.s, self.lora_mac, addr)
         return rcvr_addr, stats_retrans, FAILED
 
-    def read(self, addr=ANY_ADDR):
+    def recvit(self, addr=ANY_ADDR):
         rcvd_data, snd_addr = self._crecv(self.s, self.lora_mac, addr)
         print(rcvd_data)
         return rcvd_data, snd_addr
