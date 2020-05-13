@@ -1,6 +1,6 @@
 # LoRaCTP: LoRa Content Transfer Protocol
 
-The code in this repository allows to transfer blocks of bytes ("content") over a LoRa (pure LoRa, no LoRaWAN) channel.
+The code in this repository allows to transfer blocks of bytes ("content") over a LoRa (pure LoRa, no LoRaWAN) channel. The library was tested with content of the size of 100kB.
 
 It is based on a stop & wait protocol and adapted to a LoRa raw channel (inspired by https://github.com/arturenault/reliable-transport-protocol by Artur Upton Renault).
 
