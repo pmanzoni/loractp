@@ -8,11 +8,11 @@ It is based on a stop & wait protocol and adapted to a LoRa raw channel (inspire
 
 ## Folder `loractp`
 
-THe codei in this folder is written in MicroPython and tested on a [LoPy4](https://pycom.io/product/lopy4/) quadruple bearer MicroPython enabled development board. File `boot.py` simply disables the WiFi to limit interferences.
+The code in this folder is written in MicroPython and tested on a [LoPy4](https://pycom.io/product/lopy4/) quadruple bearer MicroPython enabled development board. 
+
+File `loractp.py` includes the class definition. File `boot.py` simply disables the WiFi to limit interferences.
 
 * Files `ping.py` and `pong.py` are examples of a request/response interaction
-
-* File `loractp.py` includes the class definition.
 
 * File `receiver.py` shows the example of a receiving node.
 
