@@ -6,7 +6,7 @@ def send_it(tbs_bytes):
 #    tbs_bytes = str.encode(tbs)
     print('client.py: sending: ', tbs_bytes)
     try:
-        addr, quality, result = ctpc.write(rcvraddr, tbs_bytes)
+        addr, quality, result = ctpc.sendit(rcvraddr, tbs_bytes)
         print("client.py: got: ", addr, quality, result)
     except Exception as e:
         print ("client.py: EXCEPTION!! ", e)

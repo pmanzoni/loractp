@@ -1,4 +1,4 @@
-import time
+swiimport time
 import loractp
 
 VERBOSE = True
@@ -17,7 +17,7 @@ else:
 while True:
     print('receiver.py: waiting for data from : ', rcvraddr)
     try:
-        rcvd_data, addr = ctpc.read(rcvraddr)
+        rcvd_data, addr = ctpc.recvit(rcvraddr)
         print("receiver.py: got: ", rcvd_data, addr)
     except Exception as e:
         print ("receiver.py: EXCEPTION!! ", e)

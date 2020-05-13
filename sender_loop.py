@@ -17,7 +17,7 @@ while icount < 2:
     tbs_bytes = str.encode(tbs)
     print('client.py: sending: ', tbs_bytes)
     try:
-        addr, quality, result = ctpc.write(rcvraddr, tbs_bytes)
+        addr, quality, result = ctpc.sendit(rcvraddr, tbs_bytes)
 
         print("client.py: got: ", addr, quality, result)
         icount += 1
