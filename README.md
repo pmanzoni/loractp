@@ -18,7 +18,7 @@ It is written in MicroPython and tested on a [LoPy4](https://pycom.io/product/lo
 
 The code in this folder offers the same functionalities of `loractp.py`  but to be used by a generic python3 capable device (we tested it with a Raspberry Pi 3 Model B+) using the LoPy4 (connected via USB) only as a LoRa adaptor.
 Code in subfolder `lopy4code` must be loaded in a LoPy and it starts immediately when the device is powered (a 3 seconds red led blink followed by a green blink)
-Code in subfolder `p3code` is basically the rewriting of the code in the main repository but it can be executed in a "generic python3 capable device"... for example a Raspberry Pi. 
+Code in subfolder `p3code` is basically the rewriting of the code in the main repository. 
 
 * File `loractp.py` includes the class definition, and `seriallopy.py`includes the interfacing code with the LoPy... used as a LoRa adaptor.
 
