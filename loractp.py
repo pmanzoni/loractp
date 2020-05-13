@@ -27,8 +27,8 @@ __version__ = '0'
 class CTPendpoint:
 
     # Set to True for debugging messages
-    DEBUG_MODE = True
-    HARD_DEBUG_MODE = True
+    DEBUG_MODE = False
+    HARD_DEBUG_MODE = False
 
     MAX_PKT_SIZE = 222  # Maximum pkt size in LoRa with Spread Factor 7  (¿230?)
     HEADER_SIZE  = 20
