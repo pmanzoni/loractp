@@ -48,7 +48,7 @@ class CTPendpoint:
     def __init__(self, port='/dev/ttyACM0'):
 
         r = seriallopy.connect(port)                
-        print("loractp: ", r)
+        print("loractp:", r)
         if r.startswith("ERROR"): sys.exit()
 
         if self.DEBUG_MODE: print(seriallopy.writeread(b"TEST"))
