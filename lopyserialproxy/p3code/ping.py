@@ -21,6 +21,7 @@ else:
 
 while True:
 
+    t0 = time.time()
     tbs_ = {"type": "PING", "value": random.randint(1,100), "time": time.time()}
     tbsj = json.dumps(tbs_)
     tbsb = str.encode(tbsj)
@@ -52,6 +53,9 @@ while True:
     except Exception as e:
         print ("ping.py: EXCEPTION when receiving ->", e)
         break
+    t1 = time.time()
+    print ("ping.py: elapsed time = ", t1-t0)
+
 
     if input("Q to exit: ") == "Q": break
 
