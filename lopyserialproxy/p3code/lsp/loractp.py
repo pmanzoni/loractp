@@ -48,7 +48,7 @@ class CTPendpoint:
     def __init__(self, port='/dev/ttyACM0'):
 
         r = seriallopy.connect(port)                
-        print(r)
+        print("loractp: ", r)
         if r.startswith("ERROR"): sys.exit()
 
         if self.DEBUG_MODE: print(seriallopy.writeread(b"TEST"))
@@ -59,7 +59,7 @@ class CTPendpoint:
         self.my_addr  = self.lora_mac[8:]
 
         if self.DEBUG_MODE: print("lora_mac: ", self.lora_mac)
-        print("my_addr : ", self.my_addr)
+        print("loractp: my_addr = ", self.my_addr)
 
     #
     # BEGIN: Utility functions
@@ -288,13 +288,13 @@ class CTPendpoint:
 
 
     def connect(self, dest=ANY_ADDR):
-        print("connecting to... ", dest)
+        print("loractp: connecting to... ", dest)
         rcvr_addr, stats_psent, stats_retrans, FAILED = self._csend(b"CONNECT", self.lora_mac, dest)
         return self.my_addr, rcvr_addr, stats_retrans, FAILED
 
 
     def listen(self, sender=ANY_ADDR):
-        print("listening for...", sender)
+        print("loractp: listening for...", sender)
         rcvd_data, snd_addr = self._crecv(self.lora_mac, sender)
         print(rcvd_data)
         if (rcvd_data==b"CONNECT"):
@@ -308,5 +308,4 @@ class CTPendpoint:
 
     def recvit(self, addr=ANY_ADDR):
         rcvd_data, snd_addr = self._crecv(self.lora_mac, addr)
-        print(rcvd_data)
         return rcvd_data, snd_addr
