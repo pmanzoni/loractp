@@ -15,11 +15,9 @@ ctpc = loractp.CTPendpoint()
 # - result = etiher 0 (connected) or -1 (failed)
 myaddr, rcvraddr, quality, result = ctpc.connect()
 if (result == 0):
-    print("ping.py: connected from {} to {} (quality {})".format(myaddr, rcvraddr, quality))
+    print("ping.py: connected to {} (myaddr = {}, quality {})".format(rcvraddr, myaddr, quality))
 else:
-    print("ping.py: failed connection from {} to {} (quality {})".format(myaddr, rcvraddr, quality))
-
-time.sleep(2)
+    print("ping.py: failed connection to {} (myaddr = {}, quality {})".format(rcvraddr, myaddr, quality))
 
 while True:
 
@@ -36,12 +34,12 @@ while True:
         # - quality = the higher the worst, number of retransmissions 
         # - result = etiher 0 (connected) or -1 (failed)
         addr, quality, result = ctpc.sendit(rcvraddr, tbsb)
-        print("ping.py: got ", addr, quality, result)
+        print("ping.py: ACK from {} (quality = {}, result {})".format(addr, quality, result))
     except Exception as e:
-        print ("ping.py: EXCEPTION!! ", e)
+        print ("ping.py: EXCEPTION when sending -> ", e)
         break
 
-    print('ping.py: waiting for data from ', rcvraddr)
+    print('ping.py: waiting pong from: ', rcvraddr)
     try:
         # recvit(addr=ANY_ADDR):
         # - by default it waits to receive data from any LoRa device
@@ -50,9 +48,9 @@ while True:
         # - rcvd_data = that data itself
         # - addr = MAC address (shortened) of the Lora device that sent the data
         rcvd_data, addr = ctpc.recvit(rcvraddr)
-        print("ping.py: got ", rcvd_data, addr)
+        print("ping.py: pong {} from {}".format(rcvd_data, addr))
     except Exception as e:
-        print ("ping.py: EXCEPTION!! ", e)
+        print ("ping.py: EXCEPTION when receiving ->", e)
         break
 
     if input("Q to exit: ") == "Q": break
