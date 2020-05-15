@@ -19,6 +19,8 @@ if (result == 0):
 else:
     print("ping.py: failed connection to {} (myaddr = {}, quality {})".format(rcvraddr, myaddr, quality))
 
+time.sleep(1)
+
 while True:
 
     t0 = time.time()
