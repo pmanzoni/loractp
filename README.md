@@ -35,10 +35,10 @@ Code in subfolder `p3code` is basically the rewriting of the code in the main re
 ## The ping/pong example.
 
 To execute this example you need to have  a LoPy4 (lopyA)
-![](https://i.imgur.com/A0EfDnS.jpg =200x200)
+![](https://i.imgur.com/A0EfDnS.jpg)
 
 and a Raspberry Pi with a LoPy4 (lopyB) connected via USB
-![](https://i.imgur.com/6acWD3b.jpg =200x200).
+![](https://i.imgur.com/6acWD3b.jpg).
 
 Copy files `boot.py`, `loractp.py`, and `pong.py` in folder `loractp` in the lopyA, copy all files in `lopyserialproxy/lopy4code` in the lopyB, and copy all files in `lopyserialproxy/p3code` in the Raspberry Pi.
 
