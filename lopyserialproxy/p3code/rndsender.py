@@ -21,7 +21,7 @@ while True:
         # - addr = MAC address (shortened) of the Lora device that replies
         # - quality = the higher the worst, number of retransmissions 
         # - result = etiher 0 (connected) or -1 (failed)
-        addr, quality, result = ctpc.sendit(tbsb)
+        addr, quality, result = ctpc.sendit(payload=tbsb)
         print("rndsender.py: ACK from {} (quality = {}, result {})".format(addr, quality, result))
     except Exception as e:
         print ("rndsender.py: EXCEPTION when sending -> ", e)
