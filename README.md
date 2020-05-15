@@ -24,7 +24,7 @@ The code in this folder offers the same functionalities of `loractp.py`  but to 
 Code in subfolder `lopy4code` must be loaded in a LoPy and it starts immediately when the device is powered (ready after a 3 seconds red led blink followed by a green blink).
 Code in subfolder `p3code` is basically the rewriting of the code in the main repository (Folder `loractp`). 
 
-* subfolder `lsp` containes:
+* subfolder `lsp` contains:
 	- file  `loractp.py` the generic python3 version
 	- file `seriallopy.py` the code to interface with the LoPy via serial channel.
 
