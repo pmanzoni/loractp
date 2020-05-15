@@ -296,15 +296,14 @@ class CTPendpoint:
 
 
     def connect(self, dest=ANY_ADDR):
-        print("connecting to... ", dest)
+        print("loractp: connecting to... ", dest)
         rcvr_addr, stats_psent, stats_retrans, FAILED = self._csend(b"CONNECT", self.s, self.lora_mac, dest)
         return self.my_addr, rcvr_addr, stats_retrans, FAILED
 
 
     def listen(self, sender=ANY_ADDR):
-        print("listening for...", sender)
+        print("loractp: listening for...", sender)
         rcvd_data, snd_addr = self._crecv(self.s, self.lora_mac, sender)
-        print(rcvd_data)
         if (rcvd_data==b"CONNECT"):
             return self.my_addr, snd_addr, 0
         else:
