@@ -14,11 +14,9 @@ ctpc = loractp.CTPendpoint()
 
 myaddr, rcvraddr, status = ctpc.listen()
 if (status == 0):
-    print("connection from {} to me ({})".format(rcvraddr, myaddr))
+    print("pong.py: connection from {} to me ({})".format(rcvraddr, myaddr))
 else:
-    print("failed connection from {} to me ({})".format(rcvraddr, myaddr))
-
-time.sleep(2)
+    print("pong.py: failed connection from {} to me ({})".format(rcvraddr, myaddr))
 
 while True:
 
