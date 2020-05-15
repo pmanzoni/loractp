@@ -12,11 +12,10 @@ The code in this folder is written in MicroPython and tested on a [LoPy4](https:
 
 File `loractp.py` includes the class definition. File `boot.py` simply disables the WiFi to limit interferences.
 
-* Files `ping.py` and `pong.py` are examples of a request/response interaction
+* File `pong.py` can be tested with the `lopyserialproxy/p3code/ping.py` file and is an example of a request/response interaction.
 
-* File `receiver.py` shows the example of a receiving node.
+* File `plainreceiver.py` shows the example of a receiving node.
 
-* File `sender.py` shows the example of a sending node, while  `sender_loop.py` allows to send content in loop.
 
 
 ## Folder `lopyserialproxy`
@@ -26,8 +25,8 @@ Code in subfolder `lopy4code` must be loaded in a LoPy and it starts immediately
 Code in subfolder `p3code` is basically the rewriting of the code in the main repository (Folder `loractp`). 
 
 * subfolder `lsp` containes:
-- file  `loractp.py` the generic python3 version
-- file `seriallopy.py` the code to interface with the LoPy via serial channel.
+	- file  `loractp.py` the generic python3 version
+	- file `seriallopy.py` the code to interface with the LoPy via serial channel.
 
 * File `ping.py` can be tested with the `loractp/pong.py` file and is an example of a request/response interaction.
 
