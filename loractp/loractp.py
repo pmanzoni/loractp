@@ -315,5 +315,4 @@ class CTPendpoint:
 
     def recvit(self, addr=ANY_ADDR):
         rcvd_data, snd_addr = self._crecv(self.s, self.lora_mac, addr)
-        print(rcvd_data)
         return rcvd_data, snd_addr
