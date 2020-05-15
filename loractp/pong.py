@@ -34,7 +34,7 @@ while True:
     print('pong.py: sending ', tbsb)
     try:
         addr, quality, result = ctpc.sendit(rcvraddr, tbsb)
-        print("pong.py: got ", addr, quality, result)
+        print("pong.py: ACK from {} (quality = {}, result = {})".format(addr, quality, result))
     except Exception as e:
         print ("pong.py: EXCEPTION!! ", e)
         break
