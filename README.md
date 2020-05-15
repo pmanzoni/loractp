@@ -32,3 +32,10 @@ Code in subfolder `p3code` is basically the rewriting of the code in the main re
 
 * File `rndsender.py` shows the example of a sender randomly sending messages in broadcast. 
 
+## ping/pong example.
+
+The execute this example you need to have  a LoPy4 and a Raspberry via a LoPy connected via USB.
+
+## Caveats
+1. Code based on `seriallopy.py` can fail to connect to the UART the first time. It is simply a matter of trying twice
+
