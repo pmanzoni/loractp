@@ -32,9 +32,26 @@ Code in subfolder `p3code` is basically the rewriting of the code in the main re
 
 * File `rndsender.py` shows the example of a sender randomly sending messages in broadcast. 
 
-## ping/pong example.
+## The ping/pong example.
 
-The execute this example you need to have  a LoPy4 and a Raspberry via a LoPy connected via USB.
+To execute this example you need to have  a LoPy4 (lopyA)
+![](https://i.imgur.com/A0EfDnS.jpg)
+and a Raspberry Pi with a LoPy4 (lopyB) connected via USB
+![](https://i.imgur.com/6acWD3b.jpg).
+
+Copy files `boot.py`, `loractp.py`, and `pong.py` in folder `loractp` in the lopyA, copy all files in `lopyserialproxy/lopy4code` in the lopyB, and copy all files in `lopyserialproxy/p3code` in the Raspberry Pi.
+
+Execute `pong.py` in the lopyA.
+The lopyB, if plugged in the Raspberry Pi should be already ready (if you have seen the 3 seconds red led blink followed by a green blink).
+Before executing the code in the Raspberry Pi, be sure that the serial port lopyB is connected to is '/dev/ttyACM0'. Otherwise you have to explicitely indicate it in the code when creating the CTPendpoint. Like for example:
+````
+ctpc = loractp.CTPendpoint(port='/dev/ttyACM1')
+````
+Now run in the Raspberry Pi shell:
+```
+$ python3 ping.py
+```
+You should now see a message going from the Raspberry Pi to the lopyA (ping)... and the response (pong) coming form the lopyA to the Raspberry Pi.
 
 ## Caveats
 1. Code based on `seriallopy.py` can fail to connect to the UART the first time. It is simply a matter of trying twice
