@@ -38,7 +38,7 @@ To execute this example you need to have  a LoPy4 (lopyA)
 ![](https://i.imgur.com/A0EfDnS.jpg)
 
 and a Raspberry Pi with a LoPy4 (lopyB) connected via USB
-![](https://i.imgur.com/6acWD3b.jpg).
+![](https://i.imgur.com/kjrSZIf.jpg)
 
 Copy files `boot.py`, `loractp.py`, and `pong.py` in folder `loractp` in the lopyA, copy all files in `lopyserialproxy/lopy4code` in the lopyB, and copy all files in `lopyserialproxy/p3code` in the Raspberry Pi.
 
