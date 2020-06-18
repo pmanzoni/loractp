@@ -21,7 +21,11 @@ File `loractp.py` includes the class definition. File `boot.py` simply disables 
 ## Folder `lopyserialproxy`
 
 The code in this folder offers the same functionalities of `loractp.py`  but to be used by a generic python3 capable device (we tested it with a Raspberry Pi 3 Model B+) using the LoPy4 (connected via USB) only as a LoRa adaptor.
+
+Remember to sudo apt install python3-serial
+
 Code in subfolder `lopy4code` must be loaded in a LoPy and it starts immediately when the device is powered (ready after a 3 seconds red led blink followed by a green blink).
+
 Code in subfolder `p3code` is basically the rewriting of the code in the main repository (Folder `loractp`). 
 
 * subfolder `lsp` contains:
