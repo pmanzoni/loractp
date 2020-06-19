@@ -5,8 +5,8 @@ import json
 import random
 import math
 
-# def random_in_range(l=0,h=1000):
-#     random.randrange(l,h)
+def random_in_range(l=0,h=1000):
+    random.randrange(l,h)
 
 ctpc = loractp.CTPendpoint()
 
