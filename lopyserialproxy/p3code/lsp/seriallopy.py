@@ -49,7 +49,7 @@ def connect(port='/dev/ttyACM0', timeout=1):
     if r.startswith(b"OKCONNECTED"):
         return "connected to: " + port 
     else:
-    	print("r", r)
+        print("r", r)
         return "ERROR connecting to: " + port 
 
 
