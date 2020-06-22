@@ -2,9 +2,10 @@ import time
 import json
 import random
 
+import config
 import lsp.loractp as loractp
 
-ctpc = loractp.CTPendpoint()
+ctpc = loractp.CTPendpoint(port=config.serial_port)
 
 # connect(dest=ANY_ADDR):
 # - by default it tries to connect to a LoRa device that it's "listening" 
