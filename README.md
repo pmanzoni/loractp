@@ -13,9 +13,11 @@ The code in this folder is written in MicroPython and tested on:
 * Pycom LoPy3 development board (discontinued)
 * [LoPy4](https://pycom.io/product/lopy4/) quadruple bearer MicroPython enabled development board. 
 
-Pycom MicroPython 1.20.0.rc13 [v1.9.4-94bb382] on 2019-08-22; LoPy with ESP32
+Firmware version: Pycom MicroPython 1.20.0.rc13 [v1.9.4-94bb382] on 2019-08-22
 
-File `loractp.py` includes the class definition. File `boot.py` simply disables the WiFi to limit interferences.
+File `boot.py` simply disables the WiFi to limit interferences.
+
+File `loractp.py` includes the class definition. 
 
 * File `pong.py` can be tested with the `lopyserialproxy/p3code/ping.py` file and is an example of a request/response interaction.
 
