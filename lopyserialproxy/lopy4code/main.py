@@ -106,5 +106,5 @@ while True:
         iouart0.write(r)
 
     else:
-        iouart0.write("ERROR0: got..."+str(b)+"...-..."+str(dlen))
+        # iouart0.write("ERROR0: got..."+str(b)+"...-..."+str(dlen))
         ufun.flash_led_to(ufun.RED)
