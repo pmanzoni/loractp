@@ -16,8 +16,7 @@ import struct
 import sys
 import time
 
-import lsp.seriallopy as seriallopy
-
+from lsp import seriallopy
 
 __version__ = '0'
 
@@ -28,7 +27,7 @@ class CTPendpoint:
     DEBUG_MODE = False
     HARD_DEBUG_MODE = False
 
-    MAX_PKT_SIZE = 222  # Maximum pkt size in LoRa with Spread Factor 7  (¿230?)
+    MAX_PKT_SIZE = 222  # Maximum pkt size in LoRa with Spread Factor 7  (maybe 230???)
     HEADER_SIZE  = 20
     PAYLOAD_SIZE = MAX_PKT_SIZE - HEADER_SIZE
     # header structure:

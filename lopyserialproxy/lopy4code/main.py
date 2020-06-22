@@ -72,6 +72,9 @@ while True:
     elif b.startswith(b"TEST"):
         iouart0.write(b"LINE_TEST_OK")
 
+    elif b.startswith(b"CONNECT"):
+        iouart0.write(b"OKCONNECTED")
+
     elif b.startswith(b"getloramac"):
         iouart0.write(loramac)
 
@@ -106,5 +109,5 @@ while True:
         iouart0.write(r)
 
     else:
-        iouart0.write("ERROR0: got..."+str(b)+"...-..."+str(dlen))
+        # iouart0.write("ERROR0: got..."+str(b)+"...-..."+str(dlen))
         ufun.flash_led_to(ufun.RED)
