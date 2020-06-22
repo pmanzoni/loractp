@@ -16,8 +16,7 @@ import struct
 import sys
 import time
 
-import lsp.seriallopy as seriallopy
-
+from lsp import seriallopy
 
 __version__ = '0'
 
