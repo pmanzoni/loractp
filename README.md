@@ -8,7 +8,12 @@ It is based on a stop & wait protocol, inspired by https://github.com/arturenaul
 
 ## Folder `loractp`
 
-The code in this folder is written in MicroPython and tested on a [LoPy4](https://pycom.io/product/lopy4/) quadruple bearer MicroPython enabled development board. 
+The code in this folder is written in MicroPython and tested on:
+
+* Pycom LoPy3 development board (discontinued)
+* [LoPy4](https://pycom.io/product/lopy4/) quadruple bearer MicroPython enabled development board. 
+
+Pycom MicroPython 1.20.0.rc13 [v1.9.4-94bb382] on 2019-08-22; LoPy with ESP32
 
 File `loractp.py` includes the class definition. File `boot.py` simply disables the WiFi to limit interferences.
 
