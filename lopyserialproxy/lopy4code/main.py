@@ -72,6 +72,9 @@ while True:
     elif b.startswith(b"TEST"):
         iouart0.write(b"LINE_TEST_OK")
 
+    elif b.startswith(b"CONNECT"):
+        iouart0.write(b"OKCONNECTED")
+
     elif b.startswith(b"getloramac"):
         iouart0.write(loramac)
 

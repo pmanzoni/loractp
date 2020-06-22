@@ -23,7 +23,7 @@ def _connect(port='/dev/ttyACM0', timeout=1):
                         parity    = serial.PARITY_NONE, 
                         stopbits  = serial.STOPBITS_ONE, 
                         timeout   = timeout)
-
+    _write(b"CONNECT")
     # lopyuart.flushInput()
     # lopyuart.flushOutput()
 
@@ -43,12 +43,11 @@ def read_all(chunk_size=1000):
 
 def connect(port='/dev/ttyACM0', timeout=1):
     _connect(port)                
-    return "connected to: " + port 
-    # r = read_all()
-    # if r.startswith(b"ERROR0"):
-    #     return "connected to: " + port 
-    # else:
-    #     return "ERROR connecting to: " + port 
+    r = read_all()
+    if r.startswith(b"OKCONNECTED"):
+        return "connected to: " + port 
+    else:
+        return "ERROR connecting to: " + port 
 
 
 def writeread(data):
