@@ -47,6 +47,6 @@ while True:
 	tbs = ""
 	tbsj = ""
 	tbsb = ""
-    gc.collect()
+	gc.collect()
 
 	if input("Q to exit: ") == "Q": break
