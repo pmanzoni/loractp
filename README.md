@@ -1,7 +1,7 @@
 # LoRaCTP: LoRa Content Transfer Protocol
 
 
-The code in this repository allows to transfer blocks of bytes ("content") over a LoRa (pure LoRa, no LoRaWAN) channel. The library was tested with content of the size of up to 100kB.
+The code in this repository allows to transfer blocks of bytes ("content") over a LoRa (pure LoRa, no LoRaWAN) channel. The library was tested with content of the size of up to 600kB.
 
 It is based on a stop & wait protocol, inspired by https://github.com/arturenault/reliable-transport-protocol by Artur Upton Renault.
 
@@ -12,6 +12,7 @@ The code in this folder is written in MicroPython and tested on:
 
 * Pycom LoPy3 development board (discontinued)
 * [LoPy4](https://pycom.io/product/lopy4/) quadruple bearer MicroPython enabled development board. 
+* [Pysense board](https://pycom.io/product/pysense-2-0-x/)
 
 Firmware version: Pycom MicroPython 1.20.0.rc13 [v1.9.4-94bb382] on 2019-08-22
 
@@ -20,9 +21,9 @@ Files contained:
 
 * File `loractp.py` includes the class definition. 
 
-* File `pong.py` can be tested with the `lopyserialproxy/p3code/ping.py` file and is an example of a request/response interaction.
+* File `ping.py` and `pong.py` are an example of a request/response interaction. Basically, ping.py sends a message and pong.py waits for a message. Once the message is received, pong "replies" it.
 
-* File `plainreceiver.py` shows the example of a receiving node.
+* File `plainreceiver.py` shows an example of a receiving node.
 
 
 
@@ -44,7 +45,7 @@ Code in subfolder `p3code` is basically the rewriting of the code in the main re
 
 * File `rndsender.py` shows the example of a sender randomly sending messages in broadcast. 
 
-## The ping/pong example.
+### The ping/pong example.
 
 To execute this example you need to have  a LoPy4 (lopyA)
 ![](https://i.imgur.com/A0EfDnS.jpg)
