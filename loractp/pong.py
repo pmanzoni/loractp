@@ -30,7 +30,7 @@ while True:
 		print ("pong.py: EXCEPTION!! ", e)
 		break
 
-	tbs = {"type": "PONG", "value": "ADIOS", "time": time.time()}
+	tbs = {"type": "PONG", "value": rcvd_data, "time": time.time()}
 	tbsj = ujson.dumps(tbs)
 	tbsb = str.encode(tbsj)
 	print('--->pong.py: sending ', tbsb)
