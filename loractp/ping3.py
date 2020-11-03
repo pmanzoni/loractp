@@ -1,5 +1,3 @@
-# MicroPython
-
 import time
 import gc
 import ujson
