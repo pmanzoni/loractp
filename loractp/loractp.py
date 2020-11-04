@@ -332,12 +332,11 @@ class CTPendpoint:
                 if self.DEBUG_MODE: print ("DEBUG 332: packet not valid", packet)
 
         # KN: Enabling garbage collection
-        gc.enable()
-        gc.collect()
-        rcvd_data = b''
         last_check = 0
         packet = ""
         content = ""
+        gc.enable()
+        gc.collect()
         return rcvd_data, snd_addr
 
     def connect(self, dest=ANY_ADDR):
