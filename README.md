@@ -21,9 +21,9 @@ Files contained:
 
 * File `loractp.py` includes the class definition. 
 
-* File `ping.py` and `pong.py` are an example of a request/response interaction. Basically, ping.py sends a message and pong.py waits for a message. Once the message is received, pong "replies" it.
+* File `pingXXX.py` and `pong.py` are an example of a request/response interaction. Basically, pingXXX sends a message and pong waits for a message and once received it replies it. `pingrnd.py` send a random number, `pingtext.py` send a text input by user.
 
-* File `plainreceiver.py` shows an example of a receiving node.
+* File `plainreceiver.py` shows an example of a basic receiving node.
 
 
 
