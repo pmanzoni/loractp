@@ -4,10 +4,10 @@
 The code in this repository allows to transfer blocks of bytes ("content") over a LoRa (pure LoRa, no LoRaWAN) channel. The library was tested with content of the size of up to 600kB.
 
 Details of the protocol can be found in this paper:
-K. Nakamura, P. Manzoni, M. Zennaro, J. -C. Cano and C. T. Calafate, 
-"[Invited] LoRaCTP: a LoRa based Content Transfer Protocol for sustainable edge computing," 
-2020 16th International Conference on Mobility, Sensing and Networking (MSN), 2020, pp. 539-545, 
-[doi: 10.1109/MSN50589.2020.00090.](https://doi.org/10.1109/MSN50589.2020.00090)
+> K. Nakamura, P. Manzoni, M. Zennaro, J. -C. Cano and C. T. Calafate, 
+> "[Invited] LoRaCTP: a LoRa based Content Transfer Protocol for sustainable edge computing," 
+> 2020 16th International Conference on Mobility, Sensing and Networking (MSN), 2020, pp. 539-545, 
+> [doi: 10.1109/MSN50589.2020.00090.](https://doi.org/10.1109/MSN50589.2020.00090)
 
 
 
