@@ -10,7 +10,6 @@ It is based on a stop & wait protocol, inspired by https://github.com/arturenaul
 
 The code in this folder is written in MicroPython and tested on:
 
-* Pycom LoPy3 development board (discontinued)
 * [LoPy4](https://pycom.io/product/lopy4/) quadruple bearer MicroPython enabled development board. 
 * [Pysense board](https://pycom.io/product/pysense-2-0-x/)
 
@@ -27,7 +26,7 @@ Files contained:
 
 
 
-## Folder `lopyserialproxy`
+## Experimental: folder `lopyserialproxy`
 
 The code in this folder offers the same functionalities of `loractp.py`  but to be used by a generic python3 capable device (we tested it with a Raspberry Pi 3 Model B+) using the LoPy4 (connected via USB) only as a LoRa adaptor.
 
